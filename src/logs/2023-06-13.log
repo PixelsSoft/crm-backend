@@ -1,0 +1,66 @@
+2023-06-13T13:20:09.138Z info: Database connection established
+2023-06-13T13:22:59.348Z info: Database connection established
+2023-06-13T13:23:25.307Z info: Database connection established
+2023-06-13T13:23:40.383Z info: Database connection established
+2023-06-13T13:24:00.528Z info: Database connection established
+2023-06-13T13:24:26.524Z info: Database connection established
+2023-06-13T13:24:40.976Z info: Database connection established
+2023-06-13T13:26:08.811Z info: Database connection established
+2023-06-13T13:27:41.170Z info: Database connection established
+2023-06-13T13:28:18.018Z info: Database connection established
+2023-06-13T13:28:43.153Z info: Database connection established
+2023-06-13T13:28:58.529Z info: Database connection established
+2023-06-13T13:29:26.313Z info: Database connection established
+2023-06-13T13:40:00.110Z info: Database connection established
+2023-06-13T13:40:46.011Z info: Database connection established
+2023-06-13T13:43:21.252Z info: Database connection established
+2023-06-13T13:44:01.981Z info: Database connection established
+2023-06-13T13:44:52.256Z info: Database connection established
+2023-06-13T13:45:27.558Z info: Database connection established
+2023-06-13T13:46:15.075Z info: Database connection established
+2023-06-13T14:01:34.808Z info: Database connection established
+2023-06-13T14:02:50.584Z error: Category validation failed: name: Category name is required
+2023-06-13T14:04:05.651Z info: Database connection established
+2023-06-13T14:04:13.899Z error: Category validation failed: name: Category name is required
+2023-06-13T14:04:58.021Z error: Category validation failed: name: Category name is required
+2023-06-13T14:05:05.055Z info: Database connection established
+2023-06-13T14:11:23.865Z info: Database connection established
+2023-06-13T14:11:54.107Z info: Database connection established
+2023-06-13T14:14:26.781Z info: Database connection established
+2023-06-13T14:14:28.182Z error: Category validation failed: name: Category name is required
+2023-06-13T14:14:57.324Z info: Database connection established
+2023-06-13T14:16:10.560Z info: Database connection established
+2023-06-13T14:19:17.077Z info: Database connection established
+2023-06-13T17:58:58.327Z info: Database connection established
+2023-06-13T18:01:54.371Z info: Database connection established
+2023-06-13T18:10:03.611Z info: Database connection established
+2023-06-13T18:10:27.186Z info: Database connection established
+2023-06-13T18:10:52.709Z info: Database connection established
+2023-06-13T18:13:43.728Z info: Database connection established
+2023-06-13T18:15:30.651Z info: Database connection established
+2023-06-13T18:17:29.139Z info: Database connection established
+2023-06-13T18:17:56.731Z info: Database connection established
+2023-06-13T18:21:31.240Z info: Database connection established
+2023-06-13T18:22:04.199Z info: Database connection established
+2023-06-13T18:26:21.668Z info: Database connection established
+2023-06-13T18:26:41.339Z info: Database connection established
+2023-06-13T18:27:43.274Z info: Database connection established
+2023-06-13T18:28:53.677Z info: Database connection established
+2023-06-13T18:29:56.556Z info: Database connection established
+2023-06-13T18:31:59.536Z info: Database connection established
+2023-06-13T18:34:07.433Z info: Database connection established
+2023-06-13T18:35:06.062Z info: Database connection established
+2023-06-13T18:38:41.778Z info: Database connection established
+2023-06-13T18:43:54.850Z info: Database connection established
+2023-06-13T18:44:56.344Z info: Database connection established
+2023-06-13T18:45:56.025Z info: Database connection established
+2023-06-13T18:46:15.041Z error: Cannot read properties of undefined (reading 'all')
+2023-06-13T18:47:00.922Z info: Database connection established
+2023-06-13T18:47:05.175Z error: Cannot read properties of undefined (reading 'all')
+2023-06-13T18:49:48.007Z info: Database connection established
+2023-06-13T18:50:42.140Z info: Database connection established
+2023-06-13T18:50:43.506Z error: User validation failed: password: Password is required
+2023-06-13T18:53:41.185Z error: "expiresIn" should be a number of seconds or string representing a timespan
+2023-06-13T18:55:15.992Z info: Database connection established
+2023-06-13T18:58:04.838Z info: Database connection established
+2023-06-13T18:58:33.236Z info: Database connection established
