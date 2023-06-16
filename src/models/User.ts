@@ -53,14 +53,20 @@ const UserSchema = new mongoose.Schema<IUser, IUserWithMethods>({
     required: [true, "Phone number is required"],
   },
   profilePic: {
-    url: String,
-    path: String,
+    url: {
+      type: String,
+      default: "",
+    },
+    path: {
+      type: String,
+      default: "",
+    },
   },
   email: {
     type: String,
     required: [true, "email is required"],
     unique: [true, "email already exists"],
-    validate: [validator.isEmail, "Please enter valid email"],
+    validate: [validator.isEmail, "Wrong email address"],
   },
   password: {
     type: String,
@@ -75,12 +81,6 @@ const UserSchema = new mongoose.Schema<IUser, IUserWithMethods>({
     type: Date,
     default: Date.now(),
   },
-  //   isVerified: {
-  //     type: Boolean,
-  //     default: false,
-  //   },
-  //   resetPasswordToken: String,
-  //   resetPasswordExpire: Date,
 });
 
 UserSchema.pre<IUser>("save", async function (next) {

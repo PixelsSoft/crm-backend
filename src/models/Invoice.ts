@@ -2,8 +2,13 @@ import mongoose from "mongoose";
 
 const InvoiceSchema = new mongoose.Schema({
   invoiceNumber: {
-    type: Number,
+    type: String,
     default: 0,
+    unique: true,
+  },
+  customerName: {
+    type: String,
+    required: [true, "Customer name is required"],
   },
   customerEmail: {
     type: String,
@@ -53,6 +58,10 @@ const InvoiceSchema = new mongoose.Schema({
   quantity: {
     type: Number,
     default: 1,
+  },
+  customer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Customer",
   },
 });
 const Invoice = mongoose.model("Invoice", InvoiceSchema);

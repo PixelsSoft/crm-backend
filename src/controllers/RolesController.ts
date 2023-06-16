@@ -2,8 +2,15 @@ import Role from "../models/Role";
 import ErrorHandler from "../helpers/ErrorHandler";
 import CustomResponse from "../helpers/CustomResponse";
 import AsyncHandler from "../helpers/AsyncHandler";
+import { NextFunction, Request, Response } from "express";
 
-export const createRole = AsyncHandler(async (req, res, next) => {
+type TController = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => Promise<void | {}>;
+
+export const createRole: TController = AsyncHandler(async (req, res, next) => {
   const { title, access } = req.body;
   const newRole = await Role.create({
     title,
@@ -24,12 +31,12 @@ export const createRole = AsyncHandler(async (req, res, next) => {
   res.status(201).json(new CustomResponse(newRole, true, "Success"));
 });
 
-export const getAllRoles = AsyncHandler(async (req, res, next) => {
+export const getAllRoles: TController = AsyncHandler(async (req, res, next) => {
   const roles = await Role.find({});
   res.status(200).json(new CustomResponse(roles, true));
 });
 
-export const deleteRole = AsyncHandler(async (req, res, next) => {
+export const deleteRole: TController = AsyncHandler(async (req, res, next) => {
   const roleId = req.params.id;
 
   const role = await Role.findById(roleId);
