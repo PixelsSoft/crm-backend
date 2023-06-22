@@ -12,7 +12,7 @@ import { isAuthenticated } from "../middleware/AuthMiddleware";
 
 const Router = express.Router();
 
-Router.post("/users/create", upload.single("profileImg"), createUser);
+Router.post("/users/create", upload.single("profilePic"), createUser);
 Router.post("/users/login", loginUser);
 
 Router.get("/users", isAuthenticated, getAllUsers);
@@ -21,7 +21,7 @@ Router.get("/users/profile/:id", isAuthenticated, getUserDetails);
 Router.patch(
   "/users/edit/:id",
   isAuthenticated,
-  upload.single("profileImg"),
+  upload.single("profilePic"),
   editUser
 );
 Router.delete("/users/delete/:id", isAuthenticated, deleteUser);

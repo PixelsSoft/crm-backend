@@ -14,9 +14,8 @@ type TController = (
 ) => Promise<void | {}>;
 
 export const createUser: TController = AsyncHandler(async (req, res, next) => {
-  console.log("hello");
-  const user = await User.create(req.body);
-
+  const salary = parseInt(req.body.salary);
+  const user = await User.create({ ...req.body, salary });
   if (req.file) {
     user.profilePic.url = `${req.protocol}://${req.get("host")}/uploads/${
       req.file.filename
@@ -38,7 +37,7 @@ export const loginUser: TController = AsyncHandler(async (req, res, next) => {
   if (!isPasswordValid) return next(new ErrorHandler("Invalid Password", 400));
 
   let token = user.generateJwtToken();
-  res.status(201).json(new CustomResponse({ ...user, token }, true));
+  res.status(201).json(new CustomResponse({ user, token }, true));
 });
 
 export const getAllUsers: TController = AsyncHandler(async (req, res, next) => {

@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 import validator from "validator";
 
 const CustomerSchema = new mongoose.Schema({
-  name: {
+  fullName: {
     type: String,
-    required: [true, "Customer name is requured"],
+    required: [true, "Customer name is required"],
   },
   email: {
     type: String,
