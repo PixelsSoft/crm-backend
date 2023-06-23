@@ -36,10 +36,6 @@ const UserSchema = new mongoose.Schema<IUser, IUserWithMethods>({
     type: String,
     default: "",
   },
-  company: {
-    type: String,
-    default: "",
-  },
   designation: {
     type: String,
     required: [true, "Designation is required"],
@@ -55,7 +51,8 @@ const UserSchema = new mongoose.Schema<IUser, IUserWithMethods>({
   profilePic: {
     url: {
       type: String,
-      default: "",
+      default:
+        "https://miro.medium.com/v2/resize:fit:720/1*_ARzR7F_fff_KI14yMKBzw.png",
     },
     path: {
       type: String,

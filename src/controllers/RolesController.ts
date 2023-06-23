@@ -11,19 +11,48 @@ type TController = (
 ) => Promise<void | {}>;
 
 export const createRole: TController = AsyncHandler(async (req, res, next) => {
-  const { title, access } = req.body;
+  const {
+    title,
+    access: {
+      all,
+      allowDashboard,
+      allowViewInvoices,
+      allowCreateInvoices,
+      allowViewCustomers,
+      allowCreateCustomers,
+      allowViewProjects,
+      allowCreateProjects,
+      allowSales,
+      allowViewUsers,
+      allowCreateUsers,
+      allowReports,
+      allowViewExpenses,
+      allowCreateExpenses,
+      allowPayouts,
+      allowAttendance,
+      allowLeads,
+    },
+  } = req.body;
   const newRole = await Role.create({
     title,
     access: {
-      all: access.all,
-      payout: access.payout,
-      expenses: access.expenses,
-      attendance: access.attendance,
-      users: access.users,
-      projects: access.projects,
-      invoices: access.invoices,
-      customers: access.customers,
-      leads: access.leads,
+      all,
+      allowDashboard,
+      allowViewInvoices,
+      allowCreateInvoices,
+      allowViewCustomers,
+      allowCreateCustomers,
+      allowViewProjects,
+      allowCreateProjects,
+      allowSales,
+      allowViewUsers,
+      allowCreateUsers,
+      allowReports,
+      allowViewExpenses,
+      allowCreateExpenses,
+      allowPayouts,
+      allowAttendance,
+      allowLeads,
     },
   });
 

@@ -28,7 +28,9 @@ export const createUser: TController = AsyncHandler(async (req, res, next) => {
 
 export const loginUser: TController = AsyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
-  const user: IUserWithMethods | null = await User.findOne({ email });
+  const user: IUserWithMethods | null = await User.findOne({ email }).populate(
+    "role"
+  );
 
   if (!user)
     return next(new ErrorHandler("No account found with this email", 404));

@@ -4,14 +4,22 @@ export interface IRoles extends Document {
   title: string;
   access: {
     all: boolean;
-    payout: boolean;
-    attendance: boolean;
-    expenses: boolean;
-    users: boolean;
-    projects: boolean;
-    invoices: boolean;
-    customers: boolean;
-    leads: boolean;
+    allowDashboard: boolean;
+    allowViewInvoices: boolean;
+    allowCreateInvoices: boolean;
+    allowViewCustomers: boolean;
+    allowCreateCustomers: boolean;
+    allowViewProjects: boolean;
+    allowCreateProjects: boolean;
+    allowSales: boolean;
+    allowViewUsers: boolean;
+    allowCreateUsers: boolean;
+    allowReports: boolean;
+    allowViewExpenses: boolean;
+    allowCreateExpenses: boolean;
+    allowPayouts: boolean;
+    allowAttendance: boolean;
+    allowLeads: boolean;
   };
 }
 
@@ -25,55 +33,87 @@ const RoleSchema = new mongoose.Schema<IRoles>({
       type: Boolean,
       default: false,
     },
-    payout: {
+    allowDashboard: {
       type: Boolean,
       default: false,
     },
-    attendance: {
+    allowViewInvoices: {
       type: Boolean,
       default: false,
     },
-    expenses: {
+    allowCreateInvoices: {
       type: Boolean,
       default: false,
     },
-    users: {
+    allowViewCustomers: {
       type: Boolean,
       default: false,
     },
-    projects: {
+    allowCreateCustomers: {
       type: Boolean,
       default: false,
     },
-    invoices: {
+    allowViewProjects: {
       type: Boolean,
       default: false,
     },
-    customers: {
+    allowCreateProjects: {
       type: Boolean,
       default: false,
     },
-    leads: {
+    allowSales: {
+      type: Boolean,
+      default: false,
+    },
+    allowViewUsers: {
+      type: Boolean,
+      default: false,
+    },
+    allowCreateUsers: {
+      type: Boolean,
+      default: false,
+    },
+    allowReports: {
+      type: Boolean,
+      default: false,
+    },
+    allowViewExpenses: {
+      type: Boolean,
+      default: false,
+    },
+    allowCreateExpenses: {
+      type: Boolean,
+      default: false,
+    },
+    allowPayouts: {
+      type: Boolean,
+      default: false,
+    },
+    allowAttendance: {
+      type: Boolean,
+      default: false,
+    },
+    allowLeads: {
       type: Boolean,
       default: false,
     },
   },
 });
 
-RoleSchema.pre<IRoles>("save", async function (next) {
-  if (this.access.all === true) {
-    this.access.payout = true;
-    this.access.attendance = true;
-    this.access.expenses = true;
-    this.access.users = true;
-    this.access.projects = true;
-    this.access.invoices = true;
-    this.access.customers = true;
-    this.access.leads = true;
-  }
+// RoleSchema.pre<IRoles>("save", async function (next) {
+//   if (this.access.all === true) {
+//     this.access.payout = true;
+//     this.access.attendance = true;
+//     this.access.expenses = true;
+//     this.access.users = true;
+//     this.access.projects = true;
+//     this.access.invoices = true;
+//     this.access.customers = true;
+//     this.access.leads = true;
+//   }
 
-  next();
-});
+//   next();
+// });
 
 const Role = mongoose.model<IRoles>("Role", RoleSchema);
 
