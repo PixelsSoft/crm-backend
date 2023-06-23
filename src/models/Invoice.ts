@@ -59,6 +59,10 @@ const InvoiceSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
+  description: {
+    type: String,
+    default: "",
+  },
   customer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Customer",

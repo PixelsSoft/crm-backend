@@ -30,6 +30,7 @@ export const createInvoice: TController = AsyncHandler(
       total,
       amountDue,
       quantity,
+      description,
     } = req.body;
 
     const newInvoice = await Invoice.create({
@@ -47,6 +48,7 @@ export const createInvoice: TController = AsyncHandler(
       amountDue,
       memo,
       quantity,
+      description,
     });
 
     if (!customer) {

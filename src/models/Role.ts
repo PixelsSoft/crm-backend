@@ -100,20 +100,29 @@ const RoleSchema = new mongoose.Schema<IRoles>({
   },
 });
 
-// RoleSchema.pre<IRoles>("save", async function (next) {
-//   if (this.access.all === true) {
-//     this.access.payout = true;
-//     this.access.attendance = true;
-//     this.access.expenses = true;
-//     this.access.users = true;
-//     this.access.projects = true;
-//     this.access.invoices = true;
-//     this.access.customers = true;
-//     this.access.leads = true;
-//   }
+RoleSchema.pre<IRoles>("save", async function (next) {
+  const { access } = this;
+  if (access.all === true) {
+    access.allowDashboard = true;
+    access.allowViewInvoices = true;
+    access.allowCreateInvoices = true;
+    access.allowViewCustomers = true;
+    access.allowCreateCustomers = true;
+    access.allowViewProjects = true;
+    access.allowCreateProjects = true;
+    access.allowSales = true;
+    access.allowViewUsers = true;
+    access.allowCreateUsers = true;
+    access.allowReports = true;
+    access.allowViewExpenses = true;
+    access.allowCreateExpenses = true;
+    access.allowPayouts = true;
+    access.allowAttendance = true;
+    access.allowLeads = true;
+  }
 
-//   next();
-// });
+  next();
+});
 
 const Role = mongoose.model<IRoles>("Role", RoleSchema);
 
