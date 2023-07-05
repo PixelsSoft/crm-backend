@@ -14,6 +14,7 @@ import UsersRoutes from "./routes/UserRoutes";
 import RolesRoutes from "./routes/RolesRoute";
 import CustomerRoutes from "./routes/CustomerRoutes";
 import InvoiceRoutes from "./routes/InvoiceRoutes";
+import LeadRoutes from "./routes/LeadRoutes";
 
 //Configuration
 dotenv.config();
@@ -30,6 +31,7 @@ app.use("/api/v1", UsersRoutes);
 app.use("/api/v1", RolesRoutes);
 app.use("/api/v1", InvoiceRoutes);
 app.use("/api/v1", CustomerRoutes);
+app.use("/api/v1", LeadRoutes);
 
 app.use("/uploads", express.static("uploads"));
 

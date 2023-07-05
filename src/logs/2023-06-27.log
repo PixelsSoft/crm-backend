@@ -1,0 +1,130 @@
+2023-06-27T13:07:50.506Z info: Database connection established
+2023-06-27T13:08:54.331Z error: Invoice validation failed: invoiceNumber: Cast to string failed for value "{ data: '0001', success: true, message: null }" (type Object) at path "invoiceNumber"
+2023-06-27T13:08:54.337Z error: STACK: 
+2023-06-27T13:10:16.093Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T13:10:16.095Z error: STACK: 
+2023-06-27T13:10:55.157Z info: Database connection established
+2023-06-27T13:10:59.385Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T13:10:59.388Z error: STACK: 
+2023-06-27T13:11:16.133Z error: Customer validation failed: fullName: Customer name is required
+2023-06-27T13:11:16.135Z error: STACK: 
+2023-06-27T13:11:52.233Z error: E11000 duplicate key error collection: CRM-PixelsSoft.invoices index: invoiceNumber_1 dup key: { invoiceNumber: "0001" }
+2023-06-27T13:11:52.251Z error: STACK: 
+2023-06-27T13:12:30.614Z error: Customer validation failed: fullName: Customer name is required
+2023-06-27T13:12:30.614Z error: STACK: 
+2023-06-27T13:14:01.347Z info: Database connection established
+2023-06-27T13:20:49.848Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T13:20:49.853Z error: STACK: 
+2023-06-27T13:24:08.943Z error: Invoice validation failed: customerName: Customer name is required, customerEmail: Customer Email is required, currency: Currency is required, projectCategory: Category is required
+2023-06-27T13:24:08.944Z error: STACK: 
+2023-06-27T13:24:19.746Z error: Invoice validation failed: customerName: Customer name is required, customerEmail: Customer Email is required, currency: Currency is required, projectCategory: Category is required
+2023-06-27T13:24:19.747Z error: STACK: 
+2023-06-27T13:25:36.911Z error: Invoice validation failed: customerName: Customer name is required, customerEmail: Customer Email is required, currency: Currency is required, projectCategory: Category is required
+2023-06-27T13:25:36.911Z error: STACK: 
+2023-06-27T13:40:48.793Z info: Database connection established
+2023-06-27T13:45:05.575Z info: Database connection established
+2023-06-27T13:45:26.626Z info: Database connection established
+2023-06-27T13:45:48.562Z info: Database connection established
+2023-06-27T13:47:02.306Z info: Database connection established
+2023-06-27T13:48:21.651Z info: Database connection established
+2023-06-27T13:49:01.281Z info: Database connection established
+2023-06-27T13:49:42.990Z info: Database connection established
+2023-06-27T13:50:11.110Z info: Database connection established
+2023-06-27T13:50:44.925Z info: Database connection established
+2023-06-27T13:51:45.624Z info: Database connection established
+2023-06-27T13:52:41.032Z info: Database connection established
+2023-06-27T13:54:17.210Z info: Database connection established
+2023-06-27T13:54:51.554Z info: Database connection established
+2023-06-27T13:55:51.032Z info: Database connection established
+2023-06-27T15:05:16.390Z info: Database connection established
+2023-06-27T15:13:50.025Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:13:50.028Z error: STACK: 
+2023-06-27T15:13:54.395Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:13:54.396Z error: STACK: 
+2023-06-27T15:14:20.030Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:14:20.031Z error: STACK: 
+2023-06-27T15:14:21.179Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:14:21.179Z error: STACK: 
+2023-06-27T15:14:37.291Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:14:37.291Z error: STACK: 
+2023-06-27T15:14:49.557Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:14:49.557Z error: STACK: 
+2023-06-27T15:15:07.028Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:15:07.028Z error: STACK: 
+2023-06-27T15:15:29.590Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:15:29.591Z error: STACK: 
+2023-06-27T15:15:32.939Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:15:32.939Z error: STACK: 
+2023-06-27T15:15:56.565Z error: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2023-06-27T15:15:56.566Z error: STACK: 
+2023-06-27T15:16:20.658Z info: Database connection established
+2023-06-27T16:09:16.654Z info: Database connection established
+2023-06-27T16:11:01.175Z info: Database connection established
+2023-06-27T16:16:12.085Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:16:12.085Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:16:12.089Z error: STACK: 
+2023-06-27T16:17:03.973Z error: Received unknown parameters: _doc, $isNew, $__
+2023-06-27T16:17:03.973Z error: Received unknown parameters: _doc, $isNew, $__
+2023-06-27T16:17:03.975Z error: STACK: 
+2023-06-27T16:18:13.941Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:18:13.941Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:18:13.943Z error: STACK: 
+2023-06-27T16:19:20.169Z info: Database connection established
+2023-06-27T16:20:03.552Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:20:03.552Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:20:03.557Z error: STACK: 
+2023-06-27T16:21:47.316Z info: Database connection established
+2023-06-27T16:22:11.578Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T16:22:11.582Z error: STACK: 
+2023-06-27T16:22:18.382Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:22:18.382Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:22:18.384Z error: STACK: 
+2023-06-27T16:24:14.686Z info: Database connection established
+2023-06-27T16:24:42.926Z error: Received unknown parameters: _doc, $isNew, $__
+2023-06-27T16:24:42.926Z error: Received unknown parameters: _doc, $isNew, $__
+2023-06-27T16:24:42.928Z error: STACK: 
+2023-06-27T16:26:28.608Z error: Operation `customers.find()` buffering timed out after 10000ms
+2023-06-27T16:26:28.612Z error: STACK: 
+2023-06-27T16:26:28.626Z error: Operation `users.findOne()` buffering timed out after 10000ms
+2023-06-27T16:26:28.626Z error: STACK: 
+2023-06-27T16:26:28.628Z error: Operation `invoices.findOne()` buffering timed out after 10000ms
+2023-06-27T16:26:28.628Z error: STACK: 
+2023-06-27T16:26:30.163Z info: Database connection established
+2023-06-27T16:26:52.927Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:26:52.927Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:26:52.928Z error: STACK: 
+2023-06-27T16:28:20.041Z info: Database connection established
+2023-06-27T16:28:39.690Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T16:28:39.693Z error: STACK: 
+2023-06-27T16:28:45.358Z error: Received unknown parameters: _doc, $isNew, $__
+2023-06-27T16:28:45.358Z error: Received unknown parameters: _doc, $isNew, $__
+2023-06-27T16:28:45.360Z error: STACK: 
+2023-06-27T16:29:58.411Z info: Database connection established
+2023-06-27T16:30:15.927Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T16:30:15.930Z error: STACK: 
+2023-06-27T16:30:21.955Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:30:21.955Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:30:21.956Z error: STACK: 
+2023-06-27T16:31:55.389Z info: Database connection established
+2023-06-27T16:32:18.657Z info: Database connection established
+2023-06-27T16:32:50.966Z info: Database connection established
+2023-06-27T16:33:12.502Z info: Database connection established
+2023-06-27T16:33:41.093Z error: Invoice validation failed: currency: Currency is required
+2023-06-27T16:33:41.098Z error: STACK: 
+2023-06-27T16:33:47.062Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:33:47.062Z error: Received unknown parameters: _doc, $__, $isNew
+2023-06-27T16:33:47.064Z error: STACK: 
+2023-06-27T16:35:43.832Z info: Database connection established
+2023-06-27T16:37:23.081Z info: Database connection established
+2023-06-27T16:57:49.910Z info: Database connection established
+2023-06-27T17:00:22.406Z error: Invalid integer: NaN
+2023-06-27T17:00:22.410Z error: STACK: 
+2023-06-27T17:00:26.343Z info: Database connection established
+2023-06-27T17:33:43.004Z error: Invalid integer: NaN
+2023-06-27T17:33:43.005Z error: STACK: 
+2023-06-27T17:33:50.384Z error: Invalid integer: NaN
+2023-06-27T17:33:50.385Z error: STACK: 
+2023-06-27T17:54:28.525Z info: Database connection established
+2023-06-27T18:06:37.944Z info: Database connection established
+2023-06-27T18:31:46.352Z info: Database connection established
+2023-06-27T18:56:42.806Z info: Database connection established

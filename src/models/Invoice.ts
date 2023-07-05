@@ -63,6 +63,10 @@ const InvoiceSchema = new mongoose.Schema({
     type: String,
     default: "",
   },
+  shareLink: {
+    type: String,
+    default: "",
+  },
   customer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Customer",

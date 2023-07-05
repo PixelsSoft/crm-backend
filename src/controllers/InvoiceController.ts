@@ -5,6 +5,7 @@ import Customer from "../models/Customer";
 import formatInvoiceNumber from "../helpers/FormatInvoiceNumber";
 import ErrorHandler from "../helpers/ErrorHandler";
 import { NextFunction, Request, Response } from "express";
+import Stripe from "stripe";
 
 type TController = (
   req: Request,
@@ -51,14 +52,17 @@ export const createInvoice: TController = AsyncHandler(
       description,
     });
 
+    const requestUrl = req.headers.referer || "Unknown";
+
     if (!customer) {
       const newCustomer = await Customer.create({
-        name: customerName,
+        fullName: customerName,
         email: customerEmail,
         address,
         address2,
         phoneNumber,
       });
+
       newInvoice.customer = newCustomer._id;
       newCustomer.purchaseHistory.push(newInvoice._id);
       await newCustomer.save();
@@ -70,10 +74,16 @@ export const createInvoice: TController = AsyncHandler(
 
       newInvoice.customer = previousCustomer._id;
       previousCustomer.purchaseHistory.push(newInvoice._id);
+
       await previousCustomer.save();
     }
 
+    let shareLink = `${requestUrl}checkout/${newInvoice._id}?amount=${newInvoice.total}&currency=${newInvoice.currency}&email=${newInvoice.customerEmail}&fullName=${newInvoice.customerName}`;
+
+    newInvoice.shareLink = shareLink;
+
     await newInvoice.save();
+
     res.status(201).json(new CustomResponse(newInvoice, true, "Success"));
   }
 );
@@ -105,7 +115,10 @@ export const getInvoiceDetails: TController = AsyncHandler(
   async (req, res, next) => {
     const id = req.params.id;
 
-    const invoice = await Invoice.findById(id).populate("customer").exec();
+    const invoice = await Invoice.findById(id)
+      .populate("customer")
+      .populate("projectCategory")
+      .exec();
     if (!invoice) return next(new ErrorHandler("Not found", 404));
 
     res.status(200).json(new CustomResponse(invoice, true));
@@ -127,6 +140,37 @@ export const getInvoiceNumber: TController = AsyncHandler(
 
     const formattedInvoiceNumber = formatInvoiceNumber(nextInvoiceNumber);
     res.status(200).json(new CustomResponse(formattedInvoiceNumber, true));
+  }
+);
+
+export const getPaymentIntent: TController = AsyncHandler(
+  async (req, res, next) => {
+    const { amount, id, email, fullName } = req.body;
+    console.log(id);
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
+      //@ts-ignore
+      apiVersion: null,
+    });
+
+    const newCustomer = await stripe.customers.create({
+      email,
+      name: fullName,
+    });
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      customer: newCustomer.id,
+      amount: parseInt(amount + "00"),
+      currency: "usd",
+      automatic_payment_methods: {
+        enabled: true,
+      },
+    });
+
+    res
+      .status(200)
+      .json(
+        new CustomResponse({ clientSecret: paymentIntent.client_secret }, true)
+      );
   }
 );
 

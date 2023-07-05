@@ -1,0 +1,20 @@
+2023-06-26T10:54:02.315Z info: Database connection established
+2023-06-26T11:02:40.174Z error: Invoice validation failed: projectCategory: Cast to ObjectId failed for value "Website Development" (type string) at path "projectCategory" because of "BSONError", customerName: Customer name is required, customerEmail: Customer Email is required
+2023-06-26T11:02:40.183Z error: STACK: 
+2023-06-26T11:03:17.916Z error: Invoice validation failed: projectCategory: Cast to ObjectId failed for value "Logo Design" (type string) at path "projectCategory" because of "BSONError", customerName: Customer name is required, customerEmail: Customer Email is required
+2023-06-26T11:03:17.918Z error: STACK: 
+2023-06-26T11:04:21.305Z info: Database connection established
+2023-06-26T11:05:52.262Z error: Invoice validation failed: customerName: Customer name is required, customerEmail: Customer Email is required
+2023-06-26T11:05:52.266Z error: STACK: 
+2023-06-26T11:07:42.566Z error: Invoice validation failed: customerName: Customer name is required, customerEmail: Customer Email is required
+2023-06-26T11:07:42.567Z error: STACK: 
+2023-06-26T13:59:57.711Z error: Category validation failed: name: Category name is required
+2023-06-26T13:59:57.711Z error: STACK: 
+2023-06-26T14:00:07.453Z error: Category validation failed: name: Category name is required
+2023-06-26T14:00:07.454Z error: STACK: 
+2023-06-26T15:55:30.351Z error: E11000 duplicate key error collection: CRM-PixelsSoft.invoices index: invoiceNumber_1 dup key: { invoiceNumber: "0001" }
+2023-06-26T15:55:30.380Z error: STACK: 
+2023-06-26T15:56:26.225Z error: E11000 duplicate key error collection: CRM-PixelsSoft.invoices index: invoiceNumber_1 dup key: { invoiceNumber: "0001" }
+2023-06-26T15:56:26.227Z error: STACK: 
+2023-06-26T15:56:26.728Z error: E11000 duplicate key error collection: CRM-PixelsSoft.invoices index: invoiceNumber_1 dup key: { invoiceNumber: "0001" }
+2023-06-26T15:56:26.729Z error: STACK: 

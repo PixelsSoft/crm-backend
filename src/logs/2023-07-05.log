@@ -1,0 +1,23 @@
+2023-07-05T11:23:58.448Z info: Database connection established
+2023-07-05T11:24:21.590Z info: Database connection established
+2023-07-05T11:25:00.851Z info: Database connection established
+2023-07-05T11:26:44.170Z info: Database connection established
+2023-07-05T15:21:42.571Z info: Database connection established
+2023-07-05T16:11:38.247Z info: Database connection established
+2023-07-05T16:12:34.613Z info: Database connection established
+2023-07-05T16:22:31.952Z error: Leads validation failed: name: Name is required, email: Email is required
+2023-07-05T16:22:31.956Z error: STACK: 
+2023-07-05T17:05:24.835Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-05T17:05:24.840Z error: STACK: 
+2023-07-05T17:05:26.761Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-05T17:05:26.762Z error: STACK: 
+2023-07-05T17:07:02.483Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-05T17:07:02.484Z error: STACK: 
+2023-07-05T17:07:04.269Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-05T17:07:04.270Z error: STACK: 
+2023-07-05T17:07:25.502Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-05T17:07:25.503Z error: STACK: 
+2023-07-05T17:07:29.779Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-05T17:07:29.780Z error: STACK: 
+2023-07-05T18:17:56.972Z info: Database connection established
+2023-07-05T18:18:45.545Z info: Database connection established
