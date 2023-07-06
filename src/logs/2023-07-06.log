@@ -1,0 +1,50 @@
+2023-07-06T11:59:55.978Z info: Database connection established
+2023-07-06T12:12:24.774Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-06T12:12:24.782Z error: STACK: 
+2023-07-06T12:13:21.011Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-06T12:13:21.012Z error: STACK: 
+2023-07-06T12:14:27.201Z error: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Leads"
+2023-07-06T12:14:27.202Z error: STACK: 
+2023-07-06T13:18:45.270Z info: Database connection established
+2023-07-06T13:19:18.485Z info: Database connection established
+2023-07-06T13:19:48.098Z info: Database connection established
+2023-07-06T13:20:19.840Z info: Database connection established
+2023-07-06T13:24:36.144Z info: Database connection established
+2023-07-06T13:30:32.840Z info: Database connection established
+2023-07-06T13:31:36.971Z error: Not authorized
+2023-07-06T13:31:36.976Z error: STACK: 
+2023-07-06T13:31:47.145Z error: Not authorized
+2023-07-06T13:31:47.146Z error: STACK: 
+2023-07-06T13:32:12.297Z error: Not authorized
+2023-07-06T13:32:12.298Z error: STACK: 
+2023-07-06T13:32:41.995Z error: Not authorized
+2023-07-06T13:32:42.000Z error: STACK: 
+2023-07-06T13:32:45.880Z info: Database connection established
+2023-07-06T13:33:22.092Z info: Database connection established
+2023-07-06T13:33:24.014Z error: Not authorized
+2023-07-06T13:33:24.019Z error: STACK: 
+2023-07-06T13:33:50.147Z info: Database connection established
+2023-07-06T13:34:08.617Z info: Database connection established
+2023-07-06T13:34:16.705Z error: Not authorized
+2023-07-06T13:34:16.710Z error: STACK: 
+2023-07-06T13:35:08.221Z info: Database connection established
+2023-07-06T13:35:09.621Z error: Not authorized
+2023-07-06T13:35:09.626Z error: STACK: 
+2023-07-06T13:35:55.130Z info: Database connection established
+2023-07-06T13:35:57.035Z error: Not authorized
+2023-07-06T13:35:57.040Z error: STACK: 
+2023-07-06T13:38:12.100Z info: Database connection established
+2023-07-06T13:38:14.155Z error: Not authorized
+2023-07-06T13:38:14.159Z error: STACK: 
+2023-07-06T13:39:11.710Z error: Operation `users.findOne()` buffering timed out after 10000ms
+2023-07-06T13:39:11.713Z error: STACK: 
+2023-07-06T13:39:12.587Z info: Database connection established
+2023-07-06T13:39:34.420Z info: Database connection established
+2023-07-06T13:41:51.320Z info: Database connection established
+2023-07-06T13:42:53.863Z info: Database connection established
+2023-07-06T13:43:02.415Z error: Schema hasn't been registered for model "email".
+Use mongoose.model(name, schema)
+2023-07-06T13:43:02.422Z error: STACK: 
+2023-07-06T13:43:55.285Z info: Database connection established
+2023-07-06T13:45:19.548Z info: Database connection established
+2023-07-06T14:48:15.113Z info: Database connection established

@@ -35,7 +35,7 @@ const CustomerSchema = new mongoose.Schema({
   ],
   _createdAt: {
     type: Date,
-    default: Date.now(),
+    default: new Date(),
   },
 });
 

@@ -2,14 +2,26 @@ import Leads from "../models/Leads";
 import AsyncHandler from "../helpers/AsyncHandler";
 import ErrorHandler from "../helpers/ErrorHandler";
 import CustomResponse from "../helpers/CustomResponse";
+import { IUser } from "../models/User";
+import { NextFunction, Request, Response } from "express";
 
-export const createNewLead = AsyncHandler(async (req, res, next) => {
-  const newLead = await Leads.create(req.body);
-  res.status(201).json(new CustomResponse(newLead, true, "Success"));
-});
+interface IAuthenticatedRequest extends Request {
+  user?: IUser;
+}
+
+export const createNewLead = AsyncHandler(
+  async (req: IAuthenticatedRequest, res: Response, next: NextFunction) => {
+    if (!req.user) return next(new ErrorHandler("Not authorized", 401));
+    const newLead = await Leads.create({
+      ...req.body,
+      createdBy: req.user._id,
+    });
+    res.status(201).json(new CustomResponse(newLead, true, "Success"));
+  }
+);
 
 export const getAllLeads = AsyncHandler(async (req, res, next) => {
-  const leads = await Leads.find({});
+  const leads = await Leads.find({}).populate("createdBy", "fullName email");
 
   res.status(200).json(new CustomResponse(leads, true, "Success"));
 });
@@ -18,6 +30,7 @@ export const updateLeadStatus = AsyncHandler(async (req, res, next) => {
   const id = req.params.id;
 
   const { status } = req.body;
+  console.log(id, status);
 
   const lead = await Leads.findById(id);
   if (!lead) return next(new ErrorHandler("Not Found", 404));

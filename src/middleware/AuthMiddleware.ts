@@ -19,6 +19,7 @@ export const isAuthenticated = AsyncHandler(
         token,
         process.env.JWT_SECRET
       ) as jwt.JwtPayload;
+
       req.user = await User.findById(decoded._id);
     }
 

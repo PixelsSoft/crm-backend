@@ -24,6 +24,14 @@ const LeadsSchema = new mongoose.Schema({
     type: String,
     default: "",
   },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  _createdAt: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 const Leads = mongoose.model("Leads", LeadsSchema);
